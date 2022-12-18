@@ -1,8 +1,8 @@
 {
   "name": "jwt-fullstack-movie",
-  "type": "module",
   "version": "0.0.1",
   "author": "vanquy",
+  "type": "module",
   "main": "index.js",
   "license": "MIT",
   "scripts": {

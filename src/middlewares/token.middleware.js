@@ -1,6 +1,6 @@
 import jsonwebtoken from "jsonwebtoken";
-import responseHandler from "../handlers/request.handler"
-import userModel from "../models/user.model"
+import responseHandler from "../handlers/request.handler.js";
+import userModel from "../models/user.model.js"
 
 
 //bearer token and verify token
