@@ -10,6 +10,7 @@ const signup = async (req, res) => {
         if (checkUser) return responseHandler.badrequest(res, "username already used")
 
         const user = new userModel()
+        console.log("check user: ", user)
 
         user.displayName = displayName
         user.username = username
