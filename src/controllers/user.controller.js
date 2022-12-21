@@ -10,7 +10,6 @@ const signup = async (req, res) => {
         if (checkUser) return responseHandler.badrequest(res, "username already used")
 
         const user = new userModel()
-        console.log("check user: ", user)
 
         user.displayName = displayName
         user.username = username
@@ -86,11 +85,12 @@ const updatePassword = async (req, res) => {
 }
 
 const getInfo = async (req, res) => {
+
     try {
         const user = await userModel.findById(req.user.id)
-
+        
         if (!user) return responseHandler.notfound(res)
-
+        
         responseHandler.ok(res, user);
     } catch {
         responseHandler.error(res)
