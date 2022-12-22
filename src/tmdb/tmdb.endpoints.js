@@ -17,7 +17,7 @@ const tmdbEndpoints = {
         `${mediaType}/${mediaId}/videos`
     ),
     mediaRecommend: ({ mediaType, mediaId }) => tmdbConfig.getUrl(
-        `${mediaType}/${mediaId}/reconmmendations`
+        `${mediaType}/${mediaId}/recommendations`
     ),
     mediaImages: ({ mediaType, mediaId }) => tmdbConfig.getUrl(
         `${mediaType}/${mediaId}/images`
