@@ -23,7 +23,7 @@ router.post(
     body("password")
         .exists().withMessage("password is required")
         .isLength({ min: 0 }).withMessage("password minimum 8 characters"),
-    body("confirmPassword")
+    body("Password")
         .exists().withMessage("confirmPassword is required")
         .isLength({ min: 0 }).withMessage("confirmPassword minimum 8 characters")
         .custom((value, { req }) => {
@@ -55,11 +55,11 @@ router.put(
     body("newPassword")
         .exists().withMessage("newPassword is required")
         .isLength({ min: 0 }).withMessage("newPassword minimum 8 characters"),
-    body("confirmPassword")
-        .exists().withMessage("confirmPassword is required")
-        .isLength({ min: 0 }).withMessage("confirmPassword minimum 8 characters")
+    body("confirmNewPassword")
+        .exists().withMessage("confirmNewPassword is required")
+        .isLength({ min: 0 }).withMessage("confirmNewPassword minimum 8 characters")
         .custom((value, { req }) => {
-            if (value !== req.body.password) throw new Error("confirmPassword not match")
+            if (value !== req.body.newPassword) throw new Error("confirmNewPassword not match")
             return true
         }),
     requestHandler.validate,
