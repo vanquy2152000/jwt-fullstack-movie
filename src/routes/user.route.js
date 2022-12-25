@@ -23,7 +23,7 @@ router.post(
     body("password")
         .exists().withMessage("password is required")
         .isLength({ min: 0 }).withMessage("password minimum 8 characters"),
-    body("Password")
+    body("confirmPassword")
         .exists().withMessage("confirmPassword is required")
         .isLength({ min: 0 }).withMessage("confirmPassword minimum 8 characters")
         .custom((value, { req }) => {
